@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Politique de confidentialite — GitForge</title>
+<meta name="description" content="Politique de confidentialite RGPD du site git-forge.fr. Decouvrez comment nous protegeons vos donnees.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://git-forge.fr/politique-confidentialite.html">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://git-forge.fr/politique-confidentialite.html">
+<meta property="og:title" content="Politique de confidentialite — GitForge">
+<meta property="og:description" content="Politique de confidentialite RGPD du site git-forge.fr.">
+<meta property="og:image" content="https://git-forge.fr/og-image.png">
+<meta property="og:locale" content="fr_FR">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Politique de confidentialite — GitForge">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0%25' stop-color='%23f97316'/%3E%3Cstop offset='100%25' stop-color='%23ea580c'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='32' height='32' rx='8' fill='%230f172a'/%3E%3Ccircle cx='16' cy='10' r='4' fill='url(%23g)'/%3E%3Ccircle cx='16' cy='24' r='3' fill='url(%23g)'/%3E%3Cline x1='16' y1='14' x2='16' y2='21' stroke='url(%23g)' stroke-width='2.5' stroke-linecap='round'/%3E%3Ccircle cx='24' cy='17' r='3' fill='url(%23g)'/%3E%3Cline x1='16' y1='16' x2='21.5' y2='17' stroke='url(%23g)' stroke-width='2.5' stroke-linecap='round'/%3E%3C/svg%3E">
+<!-- TODO: Decommenter apres creation du compte Plausible -->
+<!-- <script defer data-domain="git-forge.fr" src="https://plausible.io/js/script.js"></script> -->
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{--bg-dark:#0f172a;--bg-card:#1e293b;--accent:#f97316;--accent-hover:#ea580c;--text:#f8fafc;--text-muted:#94a3b8;--text-body:#cbd5e1;--border:#334155;--font:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;--max-w:800px}
+html{scroll-behavior:smooth}
+body{font-family:var(--font);background:var(--bg-dark);color:var(--text-body);line-height:1.7;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none;transition:color .2s}a:hover{color:var(--accent-hover)}
+
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(15,23,42,.85);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+.nav-inner{max-width:1120px;margin:0 auto;padding:0 24px;height:64px;display:flex;align-items:center;justify-content:space-between}
+.nav-logo{display:flex;align-items:center;gap:8px;font-size:1.25rem;font-weight:700;color:var(--text)}
+.nav-logo .forge{color:var(--accent)}
+.nav-links{display:flex;gap:24px;align-items:center}
+.nav-links a{color:var(--text-muted);font-size:.875rem;font-weight:500}
+.nav-links a:hover{color:var(--text)}
+.nav-cta{background:var(--accent);color:#fff!important;padding:8px 20px;border-radius:8px;font-weight:600;font-size:.875rem}
+.nav-cta:hover{background:var(--accent-hover);color:#fff!important}
+
+.legal{max-width:var(--max-w);margin:0 auto;padding:120px 24px 80px}
+.legal h1{font-size:2rem;font-weight:800;color:var(--text);margin-bottom:8px}
+.legal .legal-sub{color:var(--text-muted);margin-bottom:48px;font-size:.9rem}
+.legal h2{font-size:1.2rem;font-weight:700;color:var(--text);margin-top:40px;margin-bottom:12px;padding-top:24px;border-top:1px solid var(--border)}
+.legal h2:first-of-type{border-top:none;padding-top:0}
+.legal p,.legal li{font-size:.92rem;color:var(--text-body);margin-bottom:8px}
+.legal ul{padding-left:20px;margin-bottom:16px}
+.legal table{width:100%;border-collapse:collapse;margin:16px 0;font-size:.85rem}
+.legal th{background:var(--bg-card);color:var(--text);text-align:left;padding:10px 12px;font-weight:600;border:1px solid var(--border)}
+.legal td{padding:10px 12px;border:1px solid var(--border);color:var(--text-body)}
+.legal .todo{background:rgba(249,115,22,.1);border:1px solid rgba(249,115,22,.25);border-radius:8px;padding:12px 16px;color:var(--accent);font-size:.85rem;font-weight:500;margin:8px 0}
+
+.footer{border-top:1px solid var(--border);padding:32px 24px;text-align:center;font-size:.8rem;color:var(--text-muted)}
+.footer a{color:var(--text-muted);margin:0 12px}
+.footer a:hover{color:var(--accent)}
+.footer-brand{margin-top:12px;font-size:.75rem;color:var(--border)}
+</style>
+</head>
+<body>
+
+<nav class="nav" role="navigation" aria-label="Navigation principale">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo" aria-label="GitForge - Accueil">
+      <svg width="28" height="28" viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="#0f172a"/><circle cx="16" cy="10" r="4" fill="#f97316"/><circle cx="16" cy="24" r="3" fill="#f97316"/><line x1="16" y1="14" x2="16" y2="21" stroke="#f97316" stroke-width="2.5" stroke-linecap="round"/><circle cx="24" cy="17" r="3" fill="#f97316"/><line x1="16" y1="16" x2="21.5" y2="17" stroke="#f97316" stroke-width="2.5" stroke-linecap="round"/></svg>
+      Git<span class="forge">Forge</span>
+    </a>
+    <div class="nav-links">
+      <a href="/">Accueil</a>
+      <a href="/mentions-legales.html">Mentions legales</a>
+      <a href="/cgu.html">CGU</a>
+      <a href="/#inscription" class="nav-cta">Rejoindre la liste</a>
+    </div>
+  </div>
+</nav>
+
+<main class="legal">
+  <h1>Politique de confidentialite</h1>
+  <p class="legal-sub">git-forge.fr — Derniere mise a jour : 10 mars 2026</p>
+
+  <h2>1. Responsable du traitement</h2>
+  <!-- TODO: A completer avant mise en ligne -->
+  <div class="todo">Adresse a completer avant mise en ligne.</div>
+  <p><strong>GitForge SAS</strong><br>
+  <!-- TODO: A completer avant mise en ligne --> [Adresse], France<br>
+  DPO / Contact RGPD : <a href="mailto:dpo@git-forge.fr">dpo@git-forge.fr</a></p>
+
+  <h2>2. Donnees collectees</h2>
+  <p>Sur ce site (landing page pre-lancement), nous collectons uniquement :</p>
+  <ul>
+    <li>Adresse email (via le formulaire d'inscription a la liste d'attente)</li>
+    <li>Donnees de navigation anonymisees (via Plausible Analytics, outil europeen sans cookies, heberge en UE)</li>
+  </ul>
+  <p><strong>Nous ne collectons PAS :</strong></p>
+  <ul>
+    <li>Cookies de tracking ou publicitaires</li>
+    <li>Donnees de geolocalisation precise</li>
+    <li>Donnees sensibles au sens de l'article 9 du RGPD</li>
+    <li>Adresses IP (Plausible ne les collecte pas)</li>
+  </ul>
+
+  <h2>3. Finalites du traitement</h2>
+  <table>
+    <thead>
+      <tr><th>Finalite</th><th>Base legale</th><th>Donnees</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Liste d'attente</td><td>Consentement (art. 6.1.a RGPD)</td><td>Email</td></tr>
+      <tr><td>Informations lancement</td><td>Consentement (art. 6.1.a RGPD)</td><td>Email</td></tr>
+      <tr><td>Statistiques anonymes</td><td>Interet legitime (art. 6.1.f RGPD)</td><td>Aucune donnee personnelle</td></tr>
+    </tbody>
+  </table>
+
+  <h2>4. Duree de conservation</h2>
+  <ul>
+    <li><strong>Emails :</strong> conserves jusqu'au lancement du service ou 24 mois maximum apres inscription, sauf opposition de votre part.</li>
+    <li><strong>Donnees de navigation :</strong> 14 mois maximum (conformement aux recommandations de la CNIL). Note : Plausible Analytics ne stocke aucune donnee personnelle.</li>
+  </ul>
+
+  <h2>5. Destinataires des donnees</h2>
+  <table>
+    <thead>
+      <tr><th>Sous-traitant</th><th>Role</th><th>Localisation</th><th>Garanties</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Formspree Inc.</td><td>Traitement formulaire</td><td>USA</td><td>Clauses contractuelles types (SCC)</td></tr>
+      <tr><td>Plausible Analytics</td><td>Statistiques web</td><td>UE (Allemagne)</td><td>Aucune donnee personnelle transferee</td></tr>
+      <tr><td>Scaleway SAS</td><td>Hebergement du site</td><td>France (Paris)</td><td>RGPD natif, droit francais</td></tr>
+    </tbody>
+  </table>
+  <p>Aucune donnee n'est vendue ou partagee avec des tiers a des fins publicitaires ou commerciales.</p>
+  <p><em>Alternative envisagee : remplacement de Formspree par une solution hebergee en UE (Formspark) ou auto-hebergee sur Scaleway avant le lancement du service.</em></p>
+
+  <h2>6. Transferts hors UE</h2>
+  <p>Le formulaire Formspree peut impliquer un transfert vers les Etats-Unis, encadre par les clauses contractuelles types (SCC) de la Commission europeenne (decision 2021/914).</p>
+  <p>Toutes les autres donnees restent dans l'Union Europeenne.</p>
+  <p><strong>Note :</strong> Lors du lancement du service GitForge, TOUTES les donnees utilisateurs seront hebergees exclusivement en France (Scaleway, datacenters Paris).</p>
+
+  <h2>7. Vos droits (Articles 15 a 22 du RGPD)</h2>
+  <p>Conformement au Reglement General sur la Protection des Donnees, vous disposez des droits suivants :</p>
+  <ul>
+    <li><strong>Droit d'acces</strong> (art. 15) : obtenir la confirmation que des donnees vous concernant sont traitees et en obtenir une copie</li>
+    <li><strong>Droit de rectification</strong> (art. 16) : corriger des donnees inexactes</li>
+    <li><strong>Droit a l'effacement</strong> (art. 17) : demander la suppression de vos donnees ("droit a l'oubli")</li>
+    <li><strong>Droit a la limitation du traitement</strong> (art. 18)</li>
+    <li><strong>Droit a la portabilite</strong> (art. 20) : recevoir vos donnees dans un format structure et lisible</li>
+    <li><strong>Droit d'opposition</strong> (art. 21) : vous opposer au traitement de vos donnees</li>
+    <li><strong>Droit de retirer votre consentement</strong> a tout moment (art. 7.3)</li>
+  </ul>
+  <p>Pour exercer ces droits : <a href="mailto:dpo@git-forge.fr">dpo@git-forge.fr</a></p>
+  <p>Delai de reponse : 1 mois maximum (prolongeable de 2 mois en cas de demande complexe, conformement a l'art. 12.3 du RGPD).</p>
+
+  <h2>8. Reclamation</h2>
+  <p>Si vous estimez que le traitement de vos donnees constitue une violation du RGPD, vous pouvez introduire une reclamation aupres de :</p>
+  <p><strong>Commission Nationale de l'Informatique et des Libertes (CNIL)</strong><br>
+  3 Place de Fontenoy, TSA 80715<br>
+  75334 PARIS CEDEX 07<br>
+  Telephone : 01 53 73 22 22<br>
+  <a href="https://www.cnil.fr/fr/plaintes" rel="noopener">https://www.cnil.fr/fr/plaintes</a></p>
+
+  <h2>9. Cookies et traceurs</h2>
+  <p>Ce site n'utilise <strong>AUCUN cookie</strong>, ni traceur, ni pixel de suivi.</p>
+  <p>Plausible Analytics est un outil de mesure d'audience conforme aux recommandations de la CNIL (deliberation n 2020-091) et fonctionne sans deposer de cookies ni collecter de donnees personnelles. A ce titre, aucune banniere de consentement cookies n'est requise (exemption CNIL).</p>
+
+  <h2>10. Securite</h2>
+  <p>Nous mettons en oeuvre les mesures techniques et organisationnelles appropriees pour proteger vos donnees :</p>
+  <ul>
+    <li>Chiffrement TLS (HTTPS) sur l'ensemble du site</li>
+    <li>Hebergement sur infrastructure Scaleway certifiee ISO 27001</li>
+    <li>Acces restreint aux donnees personnelles</li>
+  </ul>
+
+  <h2>11. Modifications</h2>
+  <p>Cette politique peut etre mise a jour. La date de derniere modification est indiquee en haut de page. En cas de modification substantielle, les inscrits a la liste d'attente seront informes par email avant l'entree en vigueur des modifications.</p>
+</main>
+
+<footer class="footer" role="contentinfo">
+  <div>
+    <a href="/">Accueil</a>
+    <a href="/mentions-legales.html">Mentions legales</a>
+    <a href="/politique-confidentialite.html">Confidentialite</a>
+    <a href="/cgu.html">CGU</a>
+    <a href="mailto:contact@git-forge.fr">Contact</a>
+  </div>
+  <div class="footer-brand">GitForge SAS — Editeur de logiciel — France — Propulse par Scaleway</div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,50 @@
+name: Deploy to Scaleway S3
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Configure AWS CLI for Scaleway
+        run: |
+          aws configure set aws_access_key_id ${{ secrets.SCW_ACCESS_KEY }}
+          aws configure set aws_secret_access_key ${{ secrets.SCW_SECRET_KEY }}
+          aws configure set default.region fr-par
+
+      - name: Sync files to Scaleway S3
+        run: |
+          aws s3 sync . s3://git-forge.fr \
+            --endpoint-url https://s3.fr-par.scw.cloud \
+            --exclude ".git/*" \
+            --exclude ".github/*" \
+            --exclude ".vercel/*" \
+            --exclude ".DS_Store" \
+            --exclude ".gitignore" \
+            --acl public-read \
+            --delete
+
+      - name: Set content-type for HTML files
+        run: |
+          for file in $(find . -name "*.html" -not -path "./.git/*" -not -path "./.github/*" -not -path "./.vercel/*"); do
+            key="${file#./}"
+            aws s3 cp "s3://git-forge.fr/${key}" "s3://git-forge.fr/${key}" \
+              --endpoint-url https://s3.fr-par.scw.cloud \
+              --content-type "text/html; charset=utf-8" \
+              --metadata-directive REPLACE \
+              --acl public-read
+          done
+
+      - name: Enable website hosting
+        run: |
+          aws s3 website s3://git-forge.fr \
+            --endpoint-url https://s3.fr-par.scw.cloud \
+            --index-document index.html \
+            --error-document index.html
