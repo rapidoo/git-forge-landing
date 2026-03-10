@@ -49,3 +49,14 @@ jobs:
             --endpoint-url $S3_ENDPOINT \
             --index-document index.html \
             --error-document index.html
+
+      - name: Sync to www bucket
+        run: |
+          aws s3 sync $S3_BUCKET s3://www.git-forge.fr \
+            --endpoint-url $S3_ENDPOINT \
+            --acl public-read \
+            --delete
+          aws s3 website s3://www.git-forge.fr \
+            --endpoint-url $S3_ENDPOINT \
+            --index-document index.html \
+            --error-document index.html
